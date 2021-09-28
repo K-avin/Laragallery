@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FileUpload;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::post('/home', [App\Http\Controllers\HomeController::class, 'save'])->name('save-images')->middleware('auth');
+Route::get('/detailspage', [App\Http\Controllers\HomeController::class, 'detailsview'])->name('detailspage-view');
+Route::get('delete-album/{id}', [App\Http\Controllers\HomeController::class, 'deleteAlbum']);

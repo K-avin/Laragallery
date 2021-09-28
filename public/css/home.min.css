@@ -38,17 +38,35 @@ a:hover {
     text-decoration: none;
     outline        : 0;
 }
+
 /* detail */
 .hide-bullets {
-    list-style:none;
+    list-style : none;
     margin-left: -40px;
-    margin-top:20px;
+    margin-top : 20px;
 }
 
 .thumbnail {
     padding: 0;
 }
 
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    width: 100%;
+}
+
+/* slider */
+.hide-bullets {
+    list-style : none;
+    margin-left: -40px;
+    margin-top : 20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
     width: 100%;
 }
