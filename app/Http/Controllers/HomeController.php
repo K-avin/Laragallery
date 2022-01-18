@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\MultipleImage;
 use Illuminate\Support\Facades\File;
+use App\Models\AlbumImage;
 
 
 class HomeController extends Controller
@@ -26,13 +27,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $images = MultipleImage::all();
+        return view('home', compact('images'));
     }
 
-    public function detailsview()
+    public function homePage()
     {
         $images = MultipleImage::all();
-        return view('detailspage', compact('images'));
+        return view('welcome', compact('images'));
+    }
+
+    public function detailsview($id)
+    {
+        $images = AlbumImage::where('album_id', $id)
+        ->get();
+        $album = MultipleImage::find($id);
+        $description = $album->description;
+        $title = $album->title;
+        return view('detailspage', compact('images', 'title', 'description'));
     }
 
     public function save(Request $request)
@@ -41,22 +53,22 @@ class HomeController extends Controller
             'imageFile' => 'required',
             'imageFile.*' => 'mimes:jpeg,jpg,png,gif,csv,txt,pdf|max:2048'
           ]);
-      
+
+          $album =new MultipleImage;
+          $album->title = $request->title;
+          $album->description = $request->description;
+          $album->save();
+
           if($request->hasfile('imageFile')) {
               foreach($request->file('imageFile') as $file)
               {
                   $image_name = md5(rand(1000, 10000));
                   $ext = strtolower($file->getClientOriginalExtension());
                   $image_full_name = $image_name.'.'.$ext;
-                  $file->move(public_path().'/uploads/', $image_full_name);  
-                  $image[] = $image_full_name;
+                  $file->move(public_path().'/uploads/', $image_full_name); 
+                  
+                  AlbumImage::create(['album_id' => $album->id ,'image' => $image_full_name]);
               }
-      
-              $fileModal = new MultipleImage();
-              $fileModal->name = json_encode($image);
-              $fileModal->image_path = json_encode($image);
-             
-              $fileModal->save();
       
              return back()->with('success', 'File has successfully uploaded!');
           }
@@ -64,11 +76,11 @@ class HomeController extends Controller
     public function deleteAlbum($id)
     {
         $image = MultipleImage::find($id);
-        $imagepath = '/uploads/'.$image->image_path;
-        if(File::exists($imagepath)){
+        // $imagepath = '/uploads/'.$image->image;
+        // if(File::exists($imagepath)){
 
-            File::delete($imagepath);            
-        }
+        //     File::delete($imagepath);            
+        // }
         $image->delete();   
         return back()->with('success', 'File has successfully Deleted!');     
     }

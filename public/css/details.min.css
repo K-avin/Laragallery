@@ -86,7 +86,7 @@ body {
 }
 
 .gallery .wrap figure label {
-    cursor  : zoom-in;
+    cursor  : pointer;
     height  : auto;
     width   : 100%;
     height  : 100%;

@@ -15,4 +15,10 @@ class MultipleImage extends Model
         'name',
         'image_path'
     ];
+
+    public function firstImage(){
+
+        return $this->hasOne(AlbumImage::class, 'album_id', 'id');
+    }
+    
 }

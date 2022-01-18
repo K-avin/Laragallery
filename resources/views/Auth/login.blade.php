@@ -33,33 +33,18 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                            <div class="form-group mb-4">
-                                <div class="col-md-6 offset-md-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-    
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+                            </div>                            
                             <button name="login" id="login" class="btn
                                 btn-block login-btn mb-4" type="submit">{{ __('Login') }}</button>
                         </form>
-                        @if (Route::has('password.request'))
+                        {{-- @if (Route::has('password.request'))
                         <a class="forgot-password-link" href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}
                         </a>
-                        @endif
+                        @endif --}}
                         <p class="login-card-footer-text">Don't have an
-                            account? <a href="#!" class="text-reset">Register
+                            account? <a href="{{ route('register') }}" class="text-reset">Register
                                 here</a></p>
-                        <nav class="login-card-footer-nav">
-                            <!-- <a href="#!">Terms of use.</a>
-                            <a href="#!">Privacy policy</a> -->
-                        </nav>
                     </div>
                 </div>
             </div>

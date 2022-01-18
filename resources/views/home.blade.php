@@ -29,11 +29,11 @@
         </div>
 
         <div class="form-group">
-            <input class="form-control" type="text" placeholder="Enter the album title">
+            <input class="form-control" name="title" type="text" placeholder="Enter the album title">
         </div>
 
         <div class="form-group">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Enter the descrption"></textarea>
+          <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Enter the descrption"></textarea>
         </div>
 
         <button type="submit" name="submit" class="btn btn-primary">

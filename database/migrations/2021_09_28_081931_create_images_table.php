@@ -16,8 +16,8 @@ class CreateImagesTable extends Migration
         Schema::dropIfExists('images');
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('name',1000)->nullable();
-            $table->string('image_path',1000)->nullable();
+            $table->string('title');
+            $table->string('description', 255);
             $table->timestamps();
         });
     }

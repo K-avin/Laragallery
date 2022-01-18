@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 @section('content')
 <div class="container">
     <div class="uplode-cotent">
@@ -77,4 +77,4 @@
     });    
 </script>
 </div>
-@endsection
+@endsection --}}
