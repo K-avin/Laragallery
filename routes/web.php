@@ -22,12 +22,11 @@ Route::get('/blogs', [App\Http\Controllers\blogController::class, 'blogs'])->nam
 Route::get('/blog', [App\Http\Controllers\blogController::class, 'singleBlog'])->name('view.single_blog');
 Route::get('/contact', [App\Http\Controllers\contactController::class, 'contactUs'])->name('view.contact');
 
-// Route::get('/', function () {return view('welcome');});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
-// Route::post('/home', [App\Http\Controllers\HomeController::class, 'save'])->name('save-images')->middleware('auth');
+// Admin
+Route::get('manager/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'showDashboard'])->name('view.dashboard');
+Route::get('manager/mytasks', [App\Http\Controllers\Admin\TasksController::class, 'showTasks'])->name('view.tasks');
+Route::get('manager/setting', [App\Http\Controllers\Admin\ProfileSettingController::class, 'profileSetting'])->name('view.profile-setting');
 
-// Route::get('detail-view/{id}', [App\Http\Controllers\HomeController::class, 'detailsview'])->name('detailspage-view');
-// Route::get('delete-album/{id}', [App\Http\Controllers\HomeController::class, 'deleteAlbum']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');

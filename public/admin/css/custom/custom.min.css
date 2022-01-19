@@ -1,0 +1,508 @@
+.view-task-page .card {
+    border-radius: 5px;
+}
+
+.activity-nav .card {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* task */
+
+.limit-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.navbar {
+    background-color: #fff !important;
+    border: 0.1px solid var(--border-color);
+}
+
+.info-button a p {
+    margin-left: 20px;
+}
+
+.search-box {
+    margin-left: 20px;
+}
+
+.info-button a p {
+    margin-bottom: 0 !important;
+}
+
+.info-button a p span {
+    font-size: 16px !important;
+}
+
+.info-button a p .office-in {
+    background-color: #FAE6FF;
+    color: #D024FB;
+    padding: 6px;
+    border-radius: 50px;
+}
+
+.info-button a p .office-out {
+    background-color: #FBE5FC;
+    color: #F035FE;
+    padding: 6px;
+    border-radius: 50px;
+    transform: scaleX(-1);
+}
+
+.info-button a p .total-break {
+    background-color: #DFE4FF;
+    color: #3655FF;
+    padding: 6px;
+    border-radius: 50px;
+}
+
+.info-button a p .active-time {
+    background-color: #FFE4DB;
+    color: #FF5B27;
+    padding: 6px;
+    border-radius: 50px;
+}
+
+.info-button a p .recent-activity {
+    background-color: #F2DBFF;
+    color: #A30DF9;
+    padding: 6px;
+    border-radius: 50px;
+}
+
+.info-button a p,
+.notifications-icon,
+.break-start-icon,
+.logout-icon {
+    color: var(--text-color);
+    margin-left: 10px;
+    padding: 6px;
+}
+
+.profile-icon img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    position: relative;
+    float: inline-end;
+    margin-left: 100px;
+    zoom: 0.8;
+}
+
+
+/* Seach box */
+
+.search-box input {
+    border-radius: 50px !important;
+    border: 0.5px solid var(--border-color);
+}
+
+#custom-search-input {
+    margin-top: 10px;
+    width: 300px;
+}
+
+#custom-search-input button {
+    border: 0 !important;
+    background: none;
+    padding: 5px 8px;
+    margin-top: 2px;
+    position: absolute;
+    right: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+/* sub menu */
+
+.sub-menu-scetion .card {
+    border-top: 0 !important;
+}
+
+.sub-menu-scetion .card-body {
+    padding-bottom: 0 !important;
+}
+
+.submenu-items .sub-menu-items p span {
+    font-size: 16px !important;
+    margin: 0 !important;
+    line-height: 0 !important;
+    padding: 0 !important;
+}
+
+.sub-menu-items-section {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.sub-menu-items-section span {
+    font-size: 18px;
+    margin-left: 0 !important;
+}
+
+.sub-menu-items {
+    color: var(--text-color);
+    width: auto;
+    margin-left: 30px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.first {
+    margin-left: 22px !important;
+}
+
+.menu-active {
+    color: #177CFF;
+}
+
+
+/* main */
+
+.main-section .filtter-section {
+    border-right: 0.5px solid var(--border-color);
+    height: 100% !important;
+}
+
+.filtter-section .filtter-content .heading p {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.filtter-section .filtter-content .filtter-action-inputs label {
+    color: var(--heading-text-color);
+}
+
+.filtter-section .filtter-content .select-box select {
+    width: 100%;
+    border-color: var(--input-border-color);
+    text-decoration: none !important;
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+.filtter-section .filtter-content .task-type-input .card-body label {
+    border-color: var(--input-border-color);
+    text-decoration: none !important;
+    color: var(--text-color);
+}
+
+.filtter-section .filtter-content .status-input textarea {
+    width: 100%;
+    border-color: var(--input-border-color);
+    text-decoration: none !important;
+    color: var(--text-color);
+}
+
+.filtter-section .filtter-content .select-box,
+textarea,
+.card {
+    margin-bottom: 6px;
+}
+
+
+/* task progress section */
+
+.card-items-horizondal-text {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+    font-size: 13px;
+}
+
+.horizontal-order {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.task-main-section .action-btn-section .horizontal-order {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.main-section .main {
+    margin-right: 0 !important;
+}
+
+.task-main-section .action-btn-section .status {
+    float: right;
+    font-size: 13px;
+}
+
+.task-main-section .action-btn-section .edit-file-section {
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.task-main-section .action-btn-section .start,
+.pause,
+.cancel {
+    font-size: 13px;
+}
+
+.task-main-section .action-btn-section .pause,
+.cancel {
+    margin-left: 10px;
+}
+
+.task-main-section .card-header-section .time {
+    float: right;
+}
+
+.task-main-section .card-header-section .priority-star-high i {
+    background-color: #F9C6C6;
+    color: #FF0000;
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.task-main-section .card-header-section .priority-star-medium i {
+    background-color: #FCF5B6;
+    color: #FFE600;
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.task-main-section .card-header-section .priority-star-low i {
+    background-color: #FFE0C5;
+    color: #FF9100;
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.task-main-section .card-header-section .ot-text {
+    background-color: #DFD8FF;
+    color: #471FFC;
+    margin-top: 7px;
+    padding: 0px 2px 16px 2px;
+    text-align: center;
+    margin-bottom: 0 !important;
+    border-radius: 3px;
+    height: 15px;
+    font-size: 10px;
+}
+
+.task-main-section .card-header-section .task-type {
+    background-color: #DFEBFF;
+    color: #0060FF;
+    margin-top: 7px;
+    text-align: center;
+    padding: 0px 4px 16px 4px;
+    border-radius: 3px;
+    height: 15px;
+    font-size: 10px;
+}
+
+.task-main-section .card-header-section .completed-time {
+    margin-top: 7px;
+    background-color: #258E06;
+    padding: 0px 4px 0px 4px;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    margin-right: -3px !important;
+}
+
+.task-main-section .card-header-section .total-time {
+    font-size: 10px;
+    margin-top: 7px;
+    background-color: #38A2FF;
+    margin-left: -3px !important;
+    margin-right: 3px;
+    text-align: center;
+    color: #fff;
+    width: 30px;
+}
+
+.task-main-section .card-header-section .time .points {
+    margin-top: 9px;
+    float: right;
+    font-size: 8px;
+    color: #FF9900;
+}
+
+.task-main-section .card-header-section .project-name a {
+    text-decoration: none;
+    margin-top: 8px;
+    font-size: 15px;
+    color: #373737;
+    font-weight: 600;
+}
+
+.task-main-section .card-header-section .module {
+    color: #505050;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.task-main-section .card-header-section .task-title {
+    font-size: 13px;
+    color: #828282;
+}
+
+.task-main-section .card-header-section .action-btn-section .start,
+.pause,
+.cancel,
+.edit,
+.attachment {
+    color: #686868;
+}
+
+.task-main-section .card-header-section .action-btn-section .start .active {
+    color: #2700F8;
+}
+
+.task-main-section .card-header-section .action-btn-section .start:hover {
+    color: #2700F8;
+}
+
+.task-main-section .card-header-section .action-btn-section .pause:hover {
+    color: #379BFF;
+}
+
+.task-main-section .card-header-section .action-btn-section .pause-active {
+    color: #379BFF;
+}
+
+.task-main-section .card-header-section .action-btn-section .cancel:hover {
+    color: #d81111;
+}
+
+.task-main-section .card-header-section .action-btn-section .cancel-active {
+    color: #d81111;
+}
+
+.task-main-section .card-header-section .action-btn-section .status {
+    color: #fff;
+    background-color: #FF9900;
+    padding: 0px 4px 0px 4px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.task-main-section .card-header-section .action-btn-section .status-started {
+    color: #2700F8;
+    background-color: #E4DFFF;
+    padding: 0px 4px 0px 4px;
+    font-weight: 600;
+    font-size: 12px;
+    float: right;
+}
+
+.task-main-section .card-header-section .action-btn-section .status-onhold {
+    color: #fff;
+    background-color: #379BFF;
+    padding: 0px 4px 0px 4px;
+    font-weight: 600;
+    font-size: 12px;
+    float: right;
+}
+
+.task-main-section .card-header-section .action-btn-section .status-canceled {
+    color: #fff;
+    background-color: #d81111;
+    padding: 0px 4px 0px 4px;
+    font-weight: 600;
+    font-size: 12px;
+    float: right;
+}
+
+.save-btn {
+    border: 1px solid #088F28;
+    color: #088F28;
+    background-color: #fff;
+    border-radius: 0 !important;
+    float: right;
+}
+
+.cancel-btn {
+    border: 1px solid #D10808;
+    color: #D10808;
+    background-color: #fff;
+    border-radius: 0 !important;
+    float: right;
+    margin-left: 5px !important;
+}
+
+.attch-btn {
+    background-color: #fff;
+    border: 1px solid #B9B9B9;
+    padding: 0px 4px 0px 4px;
+}
+
+.save-btn:hover {
+    border: 1px solid #088F28;
+    color: #fff;
+    background-color: #088F28;
+    border-radius: 0 !important;
+}
+
+.cancel-btn:hover {
+    border: 1px solid #D10808;
+    color: #fff;
+    background-color: #D10808;
+    border-radius: 0 !important;
+}
+
+.modal-content .points-modal {
+    margin-top: 15px;
+}
+
+.modal-content .points-modal .fa-star {
+    color: #FF9900;
+}
+
+.modal-content .points-modal .recursive-modal {
+    margin-left: 20px;
+}
+
+.modal-content .points-modal .attach-modal {
+    margin-left: 20px;
+}
+
+.modal-content span {
+    color: #FF0000;
+}
+
+.modal-content input,
+textarea,
+select {
+    border-radius: 1px !important;
+    margin-bottom: 6px;
+}
+
+.modal-content .modal-body select,
+input {
+    border-color: var(--input-border-color);
+    text-decoration: none !important;
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+.modal-content .modal-body label {
+    border-color: var(--input-border-color);
+    text-decoration: none !important;
+    color: var(--text-color);
+}
+
+.modal-content .modal-body .time-modal {
+    visibility: hidden;
+}
